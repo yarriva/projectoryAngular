@@ -1,0 +1,81 @@
+<div class="body-login">
+    <app-header></app-header>
+
+    <form #f=ngForm (ngSubmit)="loginUser(f.value)" class="rectangle center signin-padding">
+        <div class="signin-padding">
+            <label class="sign-in">
+                Sign in
+            </label>
+
+            <br>
+
+            <label class="enter-your-details-b">
+                Enter your details below
+            </label>
+
+            <br><br>
+
+            <div class="form-group">
+                <label for="email" class="enter-your-details-b">
+                    Email address
+                </label>
+                <br>
+                <input ngModel name="userEmail" #userEmail="ngModel" id="email" type="email"
+                    class="form-control signin-text-field" aria-describedby="emailHelp"
+                    placeholder="Type your email here">
+            </div>
+
+            <br>
+
+            <div class="form-group">
+                <label for="password" class="enter-your-details-b">
+                    Password
+                </label>
+                <label class="forgot-your-password">
+                    Forgot your password?
+                </label>
+                <br>
+                <input ngModel name="userPassword" #userPassword="ngModel" id="password" [type]="passwordInputType"
+                    class="form-control signin-text-field" aria-describedby="emailHelp"
+                    placeholder="Type your password here">
+                <div (click)="togglePassword()">
+                    <svg class="eye" [class.hideEye]="isPassword" width="22px" height="16px" viewBox="0 0 22 16"
+                        version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <title>show password</title>
+                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="1.1_Signin" transform="translate(-819.000000, -486.000000)">
+                                <g id="icon/show_password" transform="translate(818.000000, 482.000000)">
+                                    <polygon id="Path" points="0 0 24 0 24 24 0 24"></polygon>
+                                    <path
+                                        d="M12,6.5 C15.79,6.5 19.17,8.63 20.82,12 C19.17,15.37 15.8,17.5 12,17.5 C8.2,17.5 4.83,15.37 3.18,12 C4.83,8.63 8.21,6.5 12,6.5 L12,6.5 Z M12,4.5 C7,4.5 2.73,7.61 1,12 C2.73,16.39 7,19.5 12,19.5 C17,19.5 21.27,16.39 23,12 C21.27,7.61 17,4.5 12,4.5 Z M12,9.5 C13.38,9.5 14.5,10.62 14.5,12 C14.5,13.38 13.38,14.5 12,14.5 C10.62,14.5 9.5,13.38 9.5,12 C9.5,10.62 10.62,9.5 12,9.5 L12,9.5 Z M12,7.5 C9.52,7.5 7.5,9.52 7.5,12 C7.5,14.48 9.52,16.5 12,16.5 C14.48,16.5 16.5,14.48 16.5,12 C16.5,9.52 14.48,7.5 12,7.5 Z"
+                                        id="Shape" fill="#CCD4DC" fill-rule="nonzero"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                    <svg class="eye" [class.hideEye]="!isPassword" width="23px" height="24px" viewBox="0 0 23 24"
+                        version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <title>hide password</title>
+                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="1.3_Signin" transform="translate(-819.000000, -482.000000)">
+                                <g id="icon/hide_password" transform="translate(818.000000, 482.000000)">
+                                    <polygon id="Path" points="0 0 24 0 24 24 0 24"></polygon>
+                                    <path
+                                        d="M12,6.5 C15.79,6.5 19.17,8.63 20.82,12 C19.17,15.37 15.8,17.5 12,17.5 C8.2,17.5 4.83,15.37 3.18,12 C4.83,8.63 8.21,6.5 12,6.5 L12,6.5 Z M12,4.5 C7,4.5 2.73,7.61 1,12 C2.73,16.39 7,19.5 12,19.5 C17,19.5 21.27,16.39 23,12 C21.27,7.61 17,4.5 12,4.5 Z M12,9.5 C13.38,9.5 14.5,10.62 14.5,12 C14.5,13.38 13.38,14.5 12,14.5 C10.62,14.5 9.5,13.38 9.5,12 C9.5,10.62 10.62,9.5 12,9.5 L12,9.5 Z M12,7.5 C9.52,7.5 7.5,9.52 7.5,12 C7.5,14.48 9.52,16.5 12,16.5 C14.48,16.5 16.5,14.48 16.5,12 C16.5,9.52 14.48,7.5 12,7.5 Z"
+                                        id="Shape" fill="#FF5252" fill-rule="nonzero"></path>
+                                    <path
+                                        d="M20.7414232,1.74142316 C21.3272096,1.15563672 22.2769571,1.15563672 22.8627435,1.74142316 C23.4485299,2.3272096 23.4485299,3.27695707 22.8627435,3.86274351 L4.25857684,22.4669102 C3.6727904,23.0526966 2.72304293,23.0526966 2.13725649,22.4669102 C1.55147006,21.8811237 1.55147006,20.9313763 2.13725649,20.3455898 L20.7414232,1.74142316 Z"
+                                        id="Line" stroke="#FFFFFF" fill="#FF5252" fill-rule="nonzero"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+
+            <br>
+
+            <button class="button">Sign in</button>
+        </div>
+    </form>
+</div>

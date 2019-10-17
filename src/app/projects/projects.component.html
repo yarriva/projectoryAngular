@@ -1,0 +1,14 @@
+<div cdkDropList class="col-sm-12 center projects-list" (cdkDropListDropped)="drop($event)">
+    <div class="projects-box" *ngFor="let project of projectList" cdkDrag>
+        <div class="col-sm-1 checkbox-project">
+        </div>
+        <div (click)="onClickProject(project.key, project.title)" class="col-sm-7 user-spectory-com">
+            {{ project.title }}
+        </div>
+        <div class="col-sm-3 date">
+            {{ project.date_created }}
+        </div>
+    </div>
+</div>
+
+<!-- <input type="checkbox" [checked]="item.check == 'true'"> -->

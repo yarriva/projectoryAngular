@@ -1,0 +1,37 @@
+.main-area {
+    background-color: #323337; 
+    height: calc( 100vh - 80px );
+}
+
+.text-title {	
+    padding: 50px 0 40px 30px;
+    height: 22px;	
+    color: #FFFFFF;	
+    font-family: Raleway;	
+    font-size: 20px;	
+    font-weight: 400;	
+    line-height: 22px;
+}
+
+.task-title-1 {	
+    padding: 0px 150px 15px 30px;
+    color: #CCD4DC;	
+    font-family: Raleway;	
+    font-size: 15px;	
+    font-weight: 200;	
+    line-height: 24px;
+}
+
+.myButton{
+    height: 100px;
+    width: 100px;
+    margin: 30px;
+}
+
+.default-button{
+    background-color: #323337;
+}
+
+.torquoise-button{
+    background-color: #42C8B5;
+}

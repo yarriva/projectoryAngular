@@ -1,0 +1,79 @@
+@import '../../styles.scss';
+
+.body-login{
+    padding: 20px 0 0 50px;
+}
+
+.rectangle {	
+    height: 502px;	
+    width: 430px;	
+    border-radius: 10px;	
+    background-color: #2A2B2E;
+}
+
+.sign-in {	
+    height: 33px;	
+    width: 90px;	
+    color: $color-red;	
+    font-family: $font-family-main;	
+    font-size: 28px;	
+    font-weight: bold;	
+    line-height: 33px;
+}
+
+.signin-padding{
+    padding: 20px;
+}
+
+.enter-your-details-b {	
+    height: 22px;	
+    width: 210px;	
+    color: #CCD4DC;	
+    font-family: Raleway;	
+    font-size: 15px;	
+    font-weight: 500;	
+    line-height: 22px;
+}
+
+.signin-text-field {	
+    height: 56px;	
+    width: 350px;
+    border-radius: 12px;
+}
+
+.form-control::-webkit-input-placeholder {
+    color: #CCD4DC;
+}
+
+.forgot-your-password {
+	height: 22px;
+	width: 139px;
+	color: #CCD4DC;
+	font-family: Raleway;
+	font-size: 13px;
+	line-height: 22px;
+	text-align: right;
+}
+
+.eye {
+    margin-top: -80px;
+    margin-left: 310px;
+    z-index: 10;
+}
+
+.button {
+    background-color: $color-red;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    height: 48px;	
+    width: 175px;
+    border-radius: 30px;
+  }
+
+  .hideEye {
+    display: none;
+  }

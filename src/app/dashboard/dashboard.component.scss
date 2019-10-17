@@ -1,0 +1,119 @@
+@import '../../styles.scss';
+
+.body-dashboard {
+    padding: 0 0 0 0;
+}
+
+.icon-button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+}
+
+.icon-menu {	
+    height: 24px;	
+    width: 24px;
+}
+
+.hello-user{
+    padding: 25px 25px 20px 0;
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+.user-spectory-com {	
+    height: 22px;	
+    width: 140px;	
+    color: #CCD4DC;	
+    font-family: Raleway;	
+    font-size: 15px;	
+    font-weight: 500;	
+    line-height: 22px;
+}
+
+.icon-bottom {
+    position: absolute;
+    bottom: 20px;  
+    float: right; 
+    margin: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.icon-text {
+    height: 14px;	
+    color: #CCD4DC;	
+    font-family: Raleway;	
+    font-size: 10px;	
+    font-weight: 100;	
+    line-height: 14px;	
+    text-align: center;
+    padding-top: 10px;
+}
+
+.icon-selected {
+    color: $color-red;	
+}
+
+.dashboard-header {
+    background-color: #323337; 
+    height: 80px; 
+    border-width: 0 0 1px 0;
+    border-style: solid;
+}
+
+.left-pannel {
+    background-color: #2A2B2E; 
+    height: 100vh;
+}
+
+.main-area {
+    background-color: #323337; 
+    height: calc( 100vh - 80px );
+}
+
+.my-projects {	
+    border-radius: 10px;
+    background: #404146;
+    margin: 20px; 
+    padding: 0;
+    height: calc( 100vh - 120px );
+}
+
+.tasks {	
+    border-radius: 10px;
+    background: #404146;
+    margin: 20px 0 20px 0; 
+    height: calc( 100vh - 120px );
+    padding: 0;
+}
+
+.text-title {	
+    height: 22px;	
+    color: #FFFFFF;	
+    font-family: Raleway;	
+    font-size: 18px;	
+    font-weight: 500;	
+    line-height: 22px;
+    padding: 40px;
+}
+
+.new-project-task {	
+    height: 19px;	
+    color: #42C8B5;	
+    font-family: Raleway;	
+    font-size: 16px;	
+    font-weight: 500;	
+    line-height: 19px;	
+    text-align: right;
+    padding: 42px 40px 40px 40px;
+}
+
+.pannel {
+    border-radius: 10px;
+    background: #404146;
+    margin: 20px; 
+    padding: 0;
+    height: calc( 100vh - 120px );
+}
