@@ -58,16 +58,45 @@ export class TasksComponent implements OnInit {
     this.db.object('/projects/' + this.currentProjectKey + '/tasks/' + task.key + '/isDone').set(event.checked);
   }
 
+  deleteTask(task) {
+    //TODO: add confirmation from user
+    this.db.object('/projects/' + this.currentProjectKey + '/tasks/' + task.key).remove();
+  }
+
   toggleSelectTask(task) {
     let myTask = this.el.nativeElement.querySelector("#task" + task.key);
     let isToSelect = myTask.classList.contains('selectedTask') ? false : true;
 
+    this.deselectTasks();
+    this.hideAllSvg();
+
+    if (isToSelect) {
+      myTask.classList.add('selectedTask');
+      const elements = Array.from(myTask.getElementsByClassName('svg'));
+      for (const x of elements) {
+        const y = <HTMLElement>x;
+        y.style.display = '';
+      }
+    } else {
+      myTask.classList.remove('selectedTask');
+    }
+  }
+
+  private deselectTasks() {
     let allTasks = this.el.nativeElement.querySelectorAll('.tasks-box');
     allTasks.forEach(element => {
       element.classList.remove('selectedTask');
     });
+  }
 
-    isToSelect ? myTask.classList.add('selectedTask') : myTask.classList.remove('selectedTask');
+  private hideAllSvg() {
+    const elements = Array.from(document.getElementsByClassName('svg'));
+    for (const x of elements) {
+      const y = <HTMLElement>x;
+      y.style.display = 'none';
+    }
   }
 }
+
+
 

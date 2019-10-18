@@ -33,4 +33,8 @@ export class DashboardComponent implements OnInit {
     this.aboutColor = about ? "#FF5252" : "#CCD4DC";
     this.settingsColor = settings ? "#FF5252" : "#CCD4DC";
   }
+
+  addNewTask(){
+    
+  }
 }

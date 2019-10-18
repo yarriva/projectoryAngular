@@ -21,6 +21,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import { TasksComponent } from './tasks/tasks.component';
 import { AboutComponent } from './about/about.component';
 import { SettingsComponent } from './settings/settings.component';
+import { NewTaskComponent } from './new-task/new-task.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { SettingsComponent } from './settings/settings.component';
     ProjectsComponent,
     TasksComponent,
     AboutComponent,
-    SettingsComponent
+    SettingsComponent,
+    NewTaskComponent
   ],
   imports: [
     BrowserModule,

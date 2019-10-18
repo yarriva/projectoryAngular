@@ -1,0 +1,11 @@
+@import '../projects/projects.component.scss';
+@import '../tasks/tasks.component.scss';
+
+.tasks-box {
+    padding-left: 15px;
+}
+
+input {
+    margin-left: 18px;
+    width: -webkit-fill-available;
+}

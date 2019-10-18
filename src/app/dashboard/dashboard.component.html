@@ -136,6 +136,7 @@
                                 My Projects
                             </div>
                             <div class="col-sm-6 new-project-task">
+                                <!-- TODO: new project implementation -->
                                 New Project
                                 <svg style="margin: 0 0 5px 5px;" width="20px" height="20px" viewBox="0 0 20 20"
                                     version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -166,9 +167,10 @@
                     <div class="col-sm-7 tasks">
                         <div class="row">
                             <div class="col-sm-6 text-title">
+                                <!-- TODO: rename project name function -->
                                 {{ projectName }}
                             </div>
-                            <div class="col-sm-6 new-project-task">
+                            <div (click)="addNewTask()" class="col-sm-6 new-project-task">
                                 New Task
                                 <svg style="margin: 0 0 5px 5px;" width="20px" height="20px" viewBox="0 0 20 20"
                                     version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -191,6 +193,9 @@
                                     </g>
                                 </svg>
                             </div>
+                        </div>
+                        <div class="row">
+                            <app-new-task [currentProjectKey]="currentProjectKey" class="newTask"></app-new-task>
                         </div>
                         <div class="row">
                             <app-tasks [currentProjectKey]="currentProjectKey"></app-tasks>
