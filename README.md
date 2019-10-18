@@ -2,7 +2,7 @@
 
 Angular exercise.
 
-Firebase user and password:
+User and password:
 yarriva@gmail.com   123456
 
 Firebase structure: https://github.com/yarriva/projectoryAngular/blob/master/firebase.JPG
