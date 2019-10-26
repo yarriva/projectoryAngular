@@ -129,14 +129,13 @@
                     </div>
                 </div>
 
-                <div *ngIf="homeColor==='#FF5252'" class="row main-area">
+                <div *ngIf="homeColor===redColor" class="row main-area">
                     <div class="col-sm-4 my-projects">
                         <div class="row">
                             <div class="col-sm-6 text-title">
                                 My Projects
                             </div>
-                            <div class="col-sm-6 new-project-task">
-                                <!-- TODO: new project implementation -->
+                            <div (click)="addNewProject()" class="col-sm-6 new-project-task">
                                 New Project
                                 <svg style="margin: 0 0 5px 5px;" width="20px" height="20px" viewBox="0 0 20 20"
                                     version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -160,8 +159,12 @@
                                 </svg>
                             </div>
                         </div>
+                        <div class="row" [hidden]="!addNewProjectVisible">
+                            <app-new-project class="newProject"></app-new-project>
+                        </div>
                         <div class="row">
-                            <app-projects (chooseProjectEvent)="receiveProjectName($event)"></app-projects>
+                            <app-projects (chooseProjectEvent)="receiveProjectName($event)" [addNewProjectVisible]="addNewProjectVisible">
+                            </app-projects>
                         </div>
                     </div>
                     <div class="col-sm-7 tasks">
@@ -194,24 +197,25 @@
                                 </svg>
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row" [hidden]="!addNewTaskVisible">
                             <app-new-task [currentProjectKey]="currentProjectKey" class="newTask"></app-new-task>
                         </div>
                         <div class="row">
-                            <app-tasks [currentProjectKey]="currentProjectKey"></app-tasks>
+                            <app-tasks [currentProjectKey]="currentProjectKey" [addNewTaskVisible]="addNewTaskVisible">
+                            </app-tasks>
                         </div>
                     </div>
                 </div>
 
-                <div *ngIf="aboutColor==='#FF5252'" class="row main-area">
+                <div *ngIf="aboutColor===redColor" class="row main-area">
                     <div class="col-sm-11 pannel">
                         <app-about></app-about>
                     </div>
                 </div>
 
-                <div *ngIf="settingsColor==='#FF5252'" class="row main-area">
+                <div *ngIf="settingsColor===redColor" class="row main-area">
                     <div class="col-sm-11 pannel">
-                        <app-settings></app-settings>   
+                        <app-settings></app-settings>
                     </div>
                 </div>
 

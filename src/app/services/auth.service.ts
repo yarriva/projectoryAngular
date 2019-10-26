@@ -43,8 +43,9 @@ export class AuthService {
   }
 
   logout() {
-    //TODO: Approve modal
-    localStorage.removeItem('user');
-    this.router.navigate(['/login']);
+    if (confirm("Are you sure to logout?")) {
+      localStorage.removeItem('user');
+      this.router.navigate(['/login']);
+    }
   }
 }

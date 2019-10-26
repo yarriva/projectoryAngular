@@ -6,7 +6,7 @@ $color-red: #FF5252;
 $font-family-main: 'Raleway', sans-serif;
 
 .signin-bg {	
-    background-image: url('/assets/signin_bg.jpg');
+    background-image: url('https://yarriva.com/projects/projectory/Angular/assets/signin_bg.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -17,9 +17,8 @@ $font-family-main: 'Raleway', sans-serif;
 .center{
     margin: 0;
     position: absolute;
-    top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 0);
 }
 
 

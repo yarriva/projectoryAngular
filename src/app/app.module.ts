@@ -17,11 +17,14 @@ import { AuthGuard } from './services/auth-guard.service';
 import { ProjectsComponent } from './projects/projects.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatCheckboxModule} from '@angular/material/checkbox';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 import { TasksComponent } from './tasks/tasks.component';
 import { AboutComponent } from './about/about.component';
 import { SettingsComponent } from './settings/settings.component';
 import { NewTaskComponent } from './new-task/new-task.component';
+import { NewProjectComponent } from './new-project/new-project.component';
+import { DatePipe } from '@angular/common';
+
 
 @NgModule({
   declarations: [
@@ -34,7 +37,8 @@ import { NewTaskComponent } from './new-task/new-task.component';
     TasksComponent,
     AboutComponent,
     SettingsComponent,
-    NewTaskComponent
+    NewTaskComponent,
+    NewProjectComponent
   ],
   imports: [
     BrowserModule,
@@ -67,7 +71,7 @@ import { NewTaskComponent } from './new-task/new-task.component';
     ]),
     BrowserAnimationsModule
   ],
-  providers: [AuthGuard],
+  providers: [AuthGuard, DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

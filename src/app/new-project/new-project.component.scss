@@ -1,7 +1,7 @@
 @import '../projects/projects.component.scss';
 @import '../tasks/tasks.component.scss';
 
-.tasks-box {
+.projects-box {
     padding-left: 15px;
     margin-top: 5px;
     border-bottom: hidden;
@@ -12,19 +12,19 @@ input {
     width: -webkit-fill-available;
 }
 
-.selectedTask {
+.selectedProject {
     height: 50px;
 }
 
 .rectangle {	
     box-sizing: border-box;	
-    height: 48px;
+    height: 68px;
     border: 1px solid rgba(204,212,220,0.3);	
     border-radius: 10px;	
     background-color: #323337;
 }
 
-.task-title-1 {	
+.project-title-1 {	
     height: 30px;
     opacity: 0.5;	
     color: #CCD4DC;	
@@ -34,4 +34,8 @@ input {
     line-height: 22px;
     background-color: #323337;
     border: none;
+}
+
+.aaa {
+    width: 100%;
 }

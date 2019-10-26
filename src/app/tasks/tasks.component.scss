@@ -8,7 +8,20 @@
     border-radius: 4px;
     overflow: hidden;
     top: 0;
-    margin-top: 230px;
+    overflow: scroll;
+    overflow-x: hidden;
+    margin-top: 100px;
+    height: calc(100% - 130px);
+}
+
+.addTopSpace {
+    margin-top: 140px;
+    height: calc(100% - 140px);
+}
+
+::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
 }
 
 .tasks-box {

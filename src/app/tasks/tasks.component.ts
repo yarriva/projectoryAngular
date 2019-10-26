@@ -13,8 +13,9 @@ import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 
 export class TasksComponent implements OnInit {
   @Input() currentProjectKey: number;
-  db: AngularFireDatabase;
+  @Input() addNewTaskVisible: boolean;
 
+  db: AngularFireDatabase;
   tasksRef: AngularFireList<any>;
   tasks: Observable<any[]>;
   subscriptionTasks: Subscription;
@@ -59,8 +60,9 @@ export class TasksComponent implements OnInit {
   }
 
   deleteTask(task) {
-    //TODO: add confirmation from user
-    this.db.object('/projects/' + this.currentProjectKey + '/tasks/' + task.key).remove();
+    if (confirm("Are you sure to delete?")) {
+      this.db.object('/projects/' + this.currentProjectKey + '/tasks/' + task.key).remove();
+    }
   }
 
   toggleSelectTask(task) {
@@ -72,7 +74,7 @@ export class TasksComponent implements OnInit {
 
     if (isToSelect) {
       myTask.classList.add('selectedTask');
-      const elements = Array.from(myTask.getElementsByClassName('svg'));
+      const elements = Array.from(myTask.getElementsByClassName('svgTask'));
       for (const x of elements) {
         const y = <HTMLElement>x;
         y.style.display = '';
@@ -90,7 +92,7 @@ export class TasksComponent implements OnInit {
   }
 
   private hideAllSvg() {
-    const elements = Array.from(document.getElementsByClassName('svg'));
+    const elements = Array.from(document.getElementsByClassName('svgTask'));
     for (const x of elements) {
       const y = <HTMLElement>x;
       y.style.display = 'none';

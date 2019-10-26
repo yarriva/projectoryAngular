@@ -1,9 +1,9 @@
-<div class="col-sm-12 tasks-list selectedTask">
+<div class="col-sm-12 tasks-list selectedTask rectangle">
     <div class="tasks-box">
-        <div class="col-sm-1 checkbox-project">
+        <div class="col-sm-1 checkbox-project newTask">
         </div>
         <div class="col-sm-11 user-spectory-com">
-            <input #newTask (keyup.enter)=addNewTask(newTask.value)>
+            <input class="task-title-1" #newTask (keyup.enter)=addNewTask(newTask.value) placeholder="Add New Task description">
         </div>
     </div>
 </div>

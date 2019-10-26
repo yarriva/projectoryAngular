@@ -9,15 +9,22 @@ import { AuthService } from '../services/auth.service';
 })
 
 export class DashboardComponent implements OnInit {
+  addNewTaskVisible: boolean;
+  addNewProjectVisible: boolean;
   projectName: string;
   currentProjectKey: number;
-  homeColor: string = "#FF5252";
-  aboutColor: string = "#CCD4DC";
-  settingsColor: string = "#CCD4DC";
+  redColor = "#FF5252";
+  whiteColor = "#CCD4DC";
+
+  homeColor: string = this.redColor;
+  aboutColor: string = this.whiteColor;
+  settingsColor: string = this.whiteColor;
 
   constructor(private authService: AuthService) {
     this.projectName = 'Choose Project';
     this.currentProjectKey = 0;
+    this.addNewTaskVisible = false;
+    this.addNewProjectVisible = false;
   }
 
   receiveProjectName($event: string) {
@@ -29,12 +36,16 @@ export class DashboardComponent implements OnInit {
   ngOnInit() { }
 
   navigate(home: boolean, about: boolean, settings: boolean) {
-    this.homeColor = home ? "#FF5252" : "#CCD4DC";
-    this.aboutColor = about ? "#FF5252" : "#CCD4DC";
-    this.settingsColor = settings ? "#FF5252" : "#CCD4DC";
+    this.homeColor = home ? this.redColor : this.whiteColor;
+    this.aboutColor = about ? this.redColor : this.whiteColor;
+    this.settingsColor = settings ? this.redColor : this.whiteColor;
   }
 
   addNewTask(){
-    
+    this.addNewTaskVisible = !this.addNewTaskVisible;
+  }
+
+  addNewProject(){
+    this.addNewProjectVisible = !this.addNewProjectVisible;
   }
 }
